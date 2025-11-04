@@ -1,35 +1,53 @@
-# 🚗 Smart Vehicle Violation Detection System  
-*(Helmet & Seatbelt Detection using YOLOv8)*  
+# Smart Vehicle Violation Detection System
+
+## Overview
+This project detects **helmet** and **seatbelt** violations using a **YOLOv8** model and **OpenCV**.  
+It highlights violators in video frames, saves snapshots, and logs details automatically.
+
+> 🚫 *Traffic light violation excluded as per project scope.*
 
 ---
 
-## 📘 Overview
-This project detects **helmet** and **seatbelt** violations using a **YOLOv8** object detection model and simple rule logic.  
-It can process real-time video streams or recorded footage, highlight violations, save snapshots, and log all detections for reporting.
-
-> 🚫 *Traffic light violation detection was excluded as per the final project scope.*
-
----
-
-## 🎯 Objectives
-- Detect **helmet** and **seatbelt** usage in video frames.  
-- Identify and log **violations** (missing helmet or seatbelt).  
-- Save snapshots for each violation.  
-- Provide a simple GUI to view logs and evidence.  
-- Support **real-time detection** or **offline video analysis**.
+## Features
+- Helmet detection ✅  
+- Seatbelt detection ✅  
+- Real-time webcam or video file input ✅  
+- Violation snapshot saving ✅  
+- Violation logging to CSV ✅  
+- Optional Streamlit dashboard ✅  
 
 ---
 
-## 🧰 Tools & Libraries
-| Library | Purpose |
-|----------|----------|
-| Python 3.x | Core language |
-| OpenCV | Video processing & visualization |
-| NumPy | Image array operations |
-| Ultralytics YOLOv8 | Object detection |
-| Pandas | Violation logging & reporting |
-| Streamlit *(optional)* | Simple UI for result viewing |
+## Tools Used
+- Python 3.x  
+- OpenCV  
+- NumPy  
+- Ultralytics YOLOv8  
+- Pandas  
+- Streamlit *(optional)*  
 
 ---
 
-## 📂 Project Structure
+##  Setup
+```bash
+git clone https://github.com/<your-username>/smart-vehicle-detection.git
+cd smart-vehicle-detection
+pip install ultralytics opencv-python pandas streamlit
+```
+
+###  Run Detection
+
+For webcam:
+```bash
+python main.py
+```
+
+For video file:
+```bash
+python main.py --source path_to_video.mp4
+```
+###  View Results
+
+Violations and images will be saved in the violations/ folder.
+
+Logs will be saved to logs/violations.csv.
