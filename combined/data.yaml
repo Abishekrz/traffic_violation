@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['no-seatbelt', 'seatbelt','Helmet', 'No-Helmet']
+
+roboflow:
+  workspace: traffic-mgqvr
+  project: seatbelt-detection-u9t4w
+  version: 5
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/traffic-mgqvr/seatbelt-detection-u9t4w/dataset/5
