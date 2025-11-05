@@ -1,13 +1,9 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
-
+train: C:/d_drive/traffic_violation/combined/train/images
+val: C:/d_drive/traffic_violation/combined/valid/images
+test: C:/d_drive/traffic_violation/combined/test/images
 nc: 4
-names: ['no-seatbelt', 'seatbelt','Helmet', 'No-Helmet']
-
-roboflow:
-  workspace: traffic-mgqvr
-  project: seatbelt-detection-u9t4w
-  version: 5
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/traffic-mgqvr/seatbelt-detection-u9t4w/dataset/5
+names:
+  0: no-seatbelt
+  1: seatbelt
+  2: Helmet
+  3: No-Helmet

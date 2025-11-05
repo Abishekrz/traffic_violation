@@ -6,7 +6,7 @@ import os, time
 # ----------------------------
 # Setup
 # ----------------------------
-MODEL_PATH = "runs/detect/train5/weights/best.pt"
+MODEL_PATH = "best.pt"
 VIOLATION_DIR = "violations"
 LOG_FILE = "logs/violations.csv"
 

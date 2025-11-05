@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLOv8 Object Detection</title>
+    <style>
+        body { font-family: Arial; text-align: center; background-color: #f7f7f7; }
+        .container { margin-top: 50px; }
+        img { max-width: 90%; height: auto; margin-top: 20px; border-radius: 10px; }
+        .objects { background: #e7f3ff; padding: 10px; border-radius: 5px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🧠 YOLOv8 Object Detection</h2>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <br><br>
+            <button type="submit">Detect Objects</button>
+        </form>
+
+        {% if uploaded_image %}
+            <h3>📸 Uploaded Image:</h3>
+            <img src="{{ uploaded_image }}" alt="Uploaded Image">
+
+            <h3>🧾 Detection Result:</h3>
+            <img src="{{ result_image }}" alt="Detection Result">
+
+            <h3>📦 Detected Objects:</h3>
+            <div class="objects">
+                {% for obj in detected_objects %}
+                    <strong>{{ obj }}</strong>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
